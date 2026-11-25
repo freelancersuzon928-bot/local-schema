@@ -1,0 +1,19 @@
+{
+  "name": "লোকাল বিজনেস Schema জেনারেটর",
+  "short_name": "Local Schema",
+  "description": "লোকাল ব্যবসার জন্য গুগল-বান্ধব Schema কোড তৈরি করুন।",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#1a56db",
+  "lang": "bn",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="আপনার লোকাল ব্যবসার জন্য গুগল-বান্ধব Schema কোড বিনামূল্যে তৈরি করুন। কোনো লগইন বা ডেটা সংরক্ষণ ছাড়াই।">
+<meta name="theme-color" content="#1a56db">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="styles.css">
+<title>লোকাল বিজনেস Schema জেনারেটর</title>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">Local Schema</a>
+    <nav>
+      <a href="#generator">টুল</a>
+      <a href="#how">কীভাবে কাজ করে</a>
+      <a href="#faq">প্রশ্নোত্তর</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>আপনার ব্যবসার গুগল তথ্য ৫ মিনিটে ঠিক করুন</h1>
+    <p>তথ্য দিন, সঠিক Schema কোড পান। কোনো লগইন নেই, কোনো তথ্য কোথাও জমা হয় না।</p>
+    <a class="btn" href="#generator">এখনই শুরু করুন</a>
+    <button id="installBtn" class="btn secondary" hidden>অ্যাপ হিসেবে ইনস্টল করুন</button>
+  </div>
+</section>
+
+<main class="container" id="generator">
+  <div class="card">
+    <div class="grid">
+      <div>
+        <label for="type">ব্যবসার ধরন <span class="hint">(আবশ্যক)</span></label>
+        <select id="type">
+          <option value="LocalBusiness">সাধারণ লোকাল ব্যবসা</option>
+          <option value="Restaurant">রেস্তোরাঁ / ক্যাফে</option>
+          <option value="FoodEstablishment">খাবারের দোকান / বেকারি</option>
+          <option value="Dentist">ডেন্টাল ক্লিনিক</option>
+          <option value="MedicalClinic">ক্লিনিক / হাসপাতাল</option>
+          <option value="Pharmacy">ফার্মেসি</option>
+          <option value="Optician">চশমার দোকান</option>
+          <option value="HairSalon">সেলুন / পার্লার</option>
+          <option value="BeautySalon">বিউটি পার্লার</option>
+          <option value="Gym">জিম / ফিটনেস সেন্টার</option>
+          <option value="EducationalOrganization">কোচিং / স্কুল / একাডেমি</option>
+          <option value="LodgingBusiness">হোটেল / গেস্ট হাউস</option>
+          <option value="RealEstateAgent">রিয়েল এস্টেট</option>
+          <option value="AutoRepair">গাড়ির গ্যারেজ</option>
+          <option value="Store">দোকান / শোরুম</option>
+          <option value="ProfessionalService">পেশাগত সেবা (আইন, হিসাব, পরামর্শ)</option>
+          <option value="HomeAndConstructionBusiness">নির্মাণ / ইলেকট্রিশিয়ান / প্লাম্বার</option>
+        </select>
+      </div>
+      <div>
+        <label for="name">ব্যবসার নাম <span class="hint">(আবশ্যক)</span></label>
+        <input id="name" placeholder="যেমন: রহিম ডেন্টাল কেয়ার">
+      </div>
+      <div class="full">
+        <label for="description">সংক্ষিপ্ত বর্ণনা <span class="hint">(২৫০ অক্ষরের মধ্যে)</span></label>
+        <textarea id="description" maxlength="250" placeholder="কী সেবা দেন, কোথায় দেন, কাদের জন্য"></textarea>
+      </div>
+      <div class="full">
+        <label for="address">ঠিকানা <span class="hint">(আবশ্যক)</span></label>
+        <input id="address" placeholder="রোড/বাড়ি নম্বর, এলাকা">
+      </div>
+      <div>
+        <label for="locality">শহর / এলাকা <span class="hint">(আবশ্যক)</span></label>
+        <input id="locality" placeholder="যেমন: ধানমন্ডি, ঢাকা">
+      </div>
+      <div>
+        <label for="postal">পোস্টাল কোড <span class="hint">(ঐচ্ছিক)</span></label>
+        <input id="postal" placeholder="যেমন: 1205">
+      </div>
+      <div>
+        <label for="phone">ফোন নম্বর <span class="hint">(আবশ্যক)</span></label>
+        <input id="phone" placeholder="+8801XXXXXXXXX">
+      </div>
+      <div>
+        <label for="email">ইমেইল <span class="hint">(ঐচ্ছিক)</span></label>
+        <input id="email" type="email" placeholder="info@example.com">
+      </div>
+      <div>
+        <label for="url">ওয়েবসাইট <span class="hint">(ঐচ্ছিক, https:// সহ)</span></label>
+        <input id="url" placeholder="https://www.example.com">
+      </div>
+      <div>
+        <label for="image">ছবির লিংক <span class="hint">(ঐচ্ছিক, https:// সহ)</span></label>
+        <input id="image" placeholder="https://.../shop.jpg">
+      </div>
+      <div>
+        <label for="priceRange">মূল্য সীমা <span class="hint">(ঐচ্ছিক)</span></label>
+        <select id="priceRange">
+          <option value="">নির্বাচন করবেন না</option>
+          <option value="$">$ (সাশ্রয়ী)</option>
+          <option value="$$">$$ (মধ্যম)</option>
+          <option value="$$$">$$$ (উচ্চ)</option>
+        </select>
+      </div>
+      <div>
+        <label for="mapUrl">Google Maps লিংক <span class="hint">(ঐচ্ছিক)</span></label>
+        <input id="mapUrl" placeholder="https://maps.google.com/...">
+      </div>
+      <div class="full">
+        <label for="socials">সোশ্যাল মিডিয়া লিংক <span class="hint">(প্রতি লাইনে একটি)</span></label>
+        <textarea id="socials" placeholder="https://facebook.com/yourpage"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>খোলার সময়</h2>
+    <p class="note">যে দিন বন্ধ থাকে সেখানে "বন্ধ" টিক দিন।</p>
+    <div id="hours"></div>
+  </div>
+
+  <div class="card">
+    <h2>যাচাই ফলাফল</h2>
+    <ul class="issues" id="issues"></ul>
+  </div>
+
+  <div class="card">
+    <h2>আপনার JSON-LD কোড</h2>
+    <pre id="output"></pre>
+    <div class="actions">
+      <button id="copy" class="btn">কপি করুন</button>
+      <button id="download" class="btn secondary">HTML ফাইল নামান</button>
+    </div>
+    <p class="note">কোডটি ওয়েবসাইটের <code>&lt;head&gt;</code> অংশে বসান। তারপর <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google Rich Results Test</a> দিয়ে পরীক্ষা করুন।</p>
+  </div>
+</main>
+
+<section class="container" id="how">
+  <h2>কীভাবে কাজ করে</h2>
+  <div class="steps">
+    <div class="card"><strong>১. তথ্য দিন</strong><p>ব্যবসার নাম, ঠিকানা, ফোন ও সময় লিখুন।</p></div>
+    <div class="card"><strong>২. কোড নিন</strong><p>ফলাফল নিজের ব্রাউজারে তৈরি হয়।</p></div>
+    <div class="card"><strong>৩. ওয়েবসাইটে বসান</strong><p>কপি করে ওয়েবসাইটের head অংশে রাখুন।</p></div>
+  </div>
+</section>
+
+<section class="container" id="faq">
+  <h2>প্রশ্নোত্তর</h2>
+  <div class="card">
+    <p><strong>আমার তথ্য কি সংরক্ষিত হয়?</strong><br>না। সবকিছু আপনার ব্রাউজারে হয়, কোথাও পাঠানো বা জমা হয় না।</p>
+    <p><strong>এটি কি গুগলে র‍্যাঙ্ক নিশ্চিত করে?</strong><br>না। এটি গুগলকে ব্যবসার তথ্য সঠিকভাবে বুঝতে সাহায্য করে। র‍্যাঙ্কিং অনেক কারণের উপর নির্ভর করে।</p>
+    <p><strong>কোন ব্যবসার জন্য কাজ করে?</strong><br>রেস্তোরাঁ, ক্লিনিক, সেলুন, কোচিং, হোটেল, দোকান, পেশাগত সেবা সহ সব লোকাল ব্যবসার জন্য।</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>বিনামূল্যে ব্যবহারযোগ্য। কোনো লগইন বা ডেটা সংরক্ষণ নেই।</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
