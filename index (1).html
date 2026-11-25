@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="আপনার ব্যবসার তথ্য গুগলে ঠিকভাবে দেখানোর জন্য বিনামূল্যে সহজ টুল। কোনো লগইন নেই।">
+<meta name="theme-color" content="#1a56db">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="styles.css">
+<title>আমার ব্যবসার গুগল তথ্য ঠিক করুন</title>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">ব্যবসার গুগল তথ্য</a>
+    <nav>
+      <a href="#step1">শুরু করুন</a>
+      <a href="audit.html">প্রোফাইল চেক</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>গুগলে আপনার ব্যবসার তথ্য ঠিক আছে কিনা দেখুন</h1>
+    <p>কয়েকটি তথ্য লিখলেই বুঝতে পারবেন কী বাকি আছে। কোনো অ্যাকাউন্ট লাগবে না, কোনো তথ্য কোথাও জমা হয় না।</p>
+    <a class="btn" href="#step1">এখনই শুরু করুন</a>
+    <button id="installBtn" class="btn secondary" hidden>ফোনে অ্যাপ হিসেবে রাখুন</button>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- Step 1 -->
+  <section class="card" id="step1">
+    <div class="step-title"><span class="step-num">১</span> আপনার ব্যবসার পরিচয়</div>
+    <p class="note">এই তথ্যগুলো আপনার দোকানের সাইনবোর্ড ও গুগল ম্যাপে যেমন আছে, ঠিক তেমন লিখুন।</p>
+    <div class="grid">
+      <div>
+        <label for="type">ব্যবসার ধরন <span class="hint">(আপনার কাজের সাথে মেলে যেটা)</span></label>
+        <select id="type">
+          <option value="LocalBusiness">সাধারণ দোকান বা সেবা</option>
+          <option value="Restaurant">রেস্তোরাঁ / ক্যাফে</option>
+          <option value="FoodEstablishment">খাবারের দোকান / বেকারি</option>
+          <option value="Dentist">ডেন্টাল ক্লিনিক</option>
+          <option value="MedicalClinic">ক্লিনিক / হাসপাতাল</option>
+          <option value="Pharmacy">ফার্মেসি</option>
+          <option value="Optician">চশমার দোকান</option>
+          <option value="HairSalon">সেলুন / পার্লার</option>
+          <option value="BeautySalon">বিউটি পার্লার</option>
+          <option value="Gym">জিম / ফিটনেস সেন্টার</option>
+          <option value="EducationalOrganization">কোচিং / স্কুল / একাডেমি</option>
+          <option value="LodgingBusiness">হোটেল / গেস্ট হাউস</option>
+          <option value="RealEstateAgent">রিয়েল এস্টেট</option>
+          <option value="AutoRepair">গাড়ির গ্যারেজ</option>
+          <option value="Store">দোকান / শোরুম</option>
+          <option value="ProfessionalService">আইন, হিসাব বা পরামর্শ সেবা</option>
+          <option value="HomeAndConstructionBusiness">নির্মাণ, ইলেকট্রিশিয়ান বা প্লাম্বার</option>
+        </select>
+      </div>
+      <div>
+        <label for="name">ব্যবসার নাম <span class="hint">(আবশ্যক)</span></label>
+        <input id="name" placeholder="যেমন: রহিম ডেন্টাল কেয়ার">
+      </div>
+      <div class="full">
+        <label for="description">ব্যবসা সম্পর্কে ২-৩ লাইন <span class="hint">(কী সেবা দেন, কাদের জন্য)</span></label>
+        <textarea id="description" maxlength="250" placeholder="যেমন: ধানমন্ডিতে দাঁতের চিকিৎসা ও পরিষ্কার সেবা দিয়ে থাকি।"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 2 -->
+  <section class="card">
+    <div class="step-title"><span class="step-num">২</span> যোগাযোগ ও ঠিকানা</div>
+    <div class="grid">
+      <div class="full">
+        <label for="address">দোকানের পূর্ণ ঠিকানা <span class="hint">(আবশ্যক)</span></label>
+        <input id="address" placeholder="রোড নম্বর, বাড়ি নম্বর, এলাকা">
+      </div>
+      <div>
+        <label for="locality">শহর / এলাকা <span class="hint">(আবশ্যক)</span></label>
+        <input id="locality" placeholder="যেমন: ধানমন্ডি, ঢাকা">
+      </div>
+      <div>
+        <label for="postal">পোস্টাল কোড <span class="hint">(জানা থাকলে)</span></label>
+        <input id="postal" placeholder="যেমন: 1205">
+      </div>
+      <div>
+        <label for="phone">কল করার নম্বর <span class="hint">(আবশ্যক)</span></label>
+        <input id="phone" placeholder="০১XXXXXXXXX">
+      </div>
+      <div>
+        <label for="email">ইমেইল <span class="hint">(থাকলে)</span></label>
+        <input id="email" type="email" placeholder="info@example.com">
+      </div>
+      <div>
+        <label for="url">ওয়েবসাইট বা ফেসবুক পেজ <span class="hint">(থাকলে)</span></label>
+        <input id="url" placeholder="https://www.example.com">
+      </div>
+      <div>
+        <label for="mapUrl">গুগল ম্যাপের লিংক <span class="hint">(থাকলে)</span></label>
+        <input id="mapUrl" placeholder="গুগল ম্যাপ থেকে শেয়ার লিংক">
+      </div>
+      <div class="full">
+        <label for="socials">অন্য সোশ্যাল পেজের লিংক <span class="hint">(প্রতি লাইনে একটি, থাকলে)</span></label>
+        <textarea id="socials" placeholder="https://facebook.com/yourpage"></textarea>
+      </div>
+      <div>
+        <label for="image">দোকানের একটি ছবির লিংক <span class="hint">(থাকলে)</span></label>
+        <input id="image" placeholder="https://...">
+      </div>
+      <div>
+        <label for="priceRange">খরচ কেমন <span class="hint">(ঐচ্ছিক)</span></label>
+        <select id="priceRange">
+          <option value="">বলতে চাই না</option>
+          <option value="$">সাশ্রয়ী</option>
+          <option value="$$">মাঝারি</option>
+          <option value="$$$">একটু বেশি</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 3 -->
+  <section class="card">
+    <div class="step-title"><span class="step-num">৩</span> কোন দিন কখন খোলা থাকেন</div>
+    <p class="note">যেদিন বন্ধ থাকেন সেখানে "বন্ধ" টিক দিন।</p>
+    <div id="hours"></div>
+  </section>
+
+  <!-- Result -->
+  <section class="card" id="result">
+    <div class="step-title"><span class="step-num">৪</span> কী বাকি আছে</div>
+    <ul class="issues" id="issues"></ul>
+  </section>
+
+  <!-- Technical section -->
+  <section class="card" id="codeSection">
+    <div class="step-title">ওয়েবসাইটে বসানোর কোড</div>
+    <p class="note">যদি আপনার নিজের ওয়েবসাইট থাকে, তাহলে ওয়েবসাইট বানানো ব্যক্তিকে এই কোডটি দিন। তিনি "Head" বা "Custom code" অংশে বসাবেন। নিজে না পারলে কোনো সমস্যা নেই, শুধু কোডটি লেখা থাকলেই হবে।</p>
+    <pre id="output"></pre>
+    <div class="actions">
+      <button id="copy" class="btn">কোড কপি করুন</button>
+      <button id="download" class="btn secondary">কোড ফাইল হিসেবে নামান</button>
+    </div>
+  </section>
+
+</main>
+
+<section class="container" id="how">
+  <h2>এই টুল কীভাবে সাহায্য করে</h2>
+  <div class="steps">
+    <div class="card"><strong>তথ্য লিখুন</strong><p>দোকানের নাম, ঠিকানা, ফোন ও খোলার সময়।</p></div>
+    <div class="card"><strong>বাকি তথ্য দেখুন</strong><p>কোন তথ্য দেওয়া হয়নি তা লাল বা হলুদ বক্সে দেখাবে।</p></div>
+    <div class="card"><strong>ঠিক করে নিন</strong><p>তথ্য পূর্ণ হলে গুগলে আপনার দোকান আরও স্পষ্ট দেখা যায়।</p></div>
+  </div>
+</section>
+
+<section class="container" id="faq">
+  <h2>সাধারণ প্রশ্ন</h2>
+  <div class="card">
+    <p><strong>আমার তথ্য কি কোথাও যায়?</strong><br>না। সবকিছু আপনার ফোন বা কম্পিউটারেই হয়।</p>
+    <p><strong>এতে কি গুগলে প্রথম পাতায় চলে আসবে?</strong><br>এর কোনো নিশ্চয়তা নেই। তবে তথ্য ঠিক থাকলে গুগল আপনার দোকান ভালোভাবে বুঝতে পারে।</p>
+    <p><strong>কোনো খরচ আছে?</strong><br>না, পুরোপুরি বিনামূল্যে।</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>বিনামূল্যে ব্যবহারযোগ্য। কোনো লগইন বা তথ্য সংরক্ষণ নেই।</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
